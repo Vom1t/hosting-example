@@ -1,0 +1,10 @@
+[Unit]
+Description=Flask app service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/vomit/app
+ExecStart=/home/vomit/app/venv/bin/python run.py
+
+[Install]
+WantedBy=multi-user.target

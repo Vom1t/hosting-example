@@ -1,0 +1,4 @@
+flask==2.0.2
+Werkzeug==2.0.2
+marshmallow==3.17.1
+
