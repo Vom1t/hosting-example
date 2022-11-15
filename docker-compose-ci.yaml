@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  web:
+    image: vomit/hosting:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    ports:
+      - "80:25000"
+    environment:
+      - DB_PASSWORD=$DB_PASSWORD
+      - DB_USER=$DB_USER
+      - DB=&DB_NAME
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=db_password
+      - POSTGRES_USER=db_user
+      - POSTGRES_DB=db_name
