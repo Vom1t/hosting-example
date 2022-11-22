@@ -12,6 +12,6 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD=db_password
-      - POSTGRES_USER=db_user
-      - POSTGRES_DB=db_name
+      - POSTGRES_PASSWORD=$DB_PASSWORD
+      - POSTGRES_USER=$DB_USER
+      - POSTGRES_DB=$DB_NAME
